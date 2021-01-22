@@ -47,7 +47,7 @@ class DataViewModel {
         self.moedas = moedas
         var vms = [DataListCellViewModel]()
         for data in moedas {
-            vms.append(DataListCellViewModel(titleText: data.name!, subTitleText: data.siglaMoeda!))
+            vms.append(DataListCellViewModel(titleText: String(data.volumeDia), subTitleText: data.siglaMoeda))
         }
         cellViewModels = vms
     }

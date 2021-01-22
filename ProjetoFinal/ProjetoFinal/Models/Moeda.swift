@@ -9,12 +9,12 @@ import Foundation
 
 struct Moeda : Decodable {
     
-    var siglaMoeda: String?
+    var siglaMoeda: String
     var name: String?
-    var priceUSD: String?
-    var volumeHora: String?
-    var volumeDia: String?
-    var volumeMes: String?
+    var priceUSD: Double?
+    var volumeHora: Double
+    var volumeDia: Double
+    var volumeMes: Double
     var idIcon: String?
     
     enum CodingKeys: String, CodingKey{

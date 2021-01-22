@@ -62,8 +62,9 @@ extension ListaMoedasViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.register(UINib(nibName: "CustomizacaoTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "customizacaoTableViewCell", for: indexPath) as? CustomizacaoTableViewCell else {
+        tableView.register(UINib(nibName: "CustomizacaoTableViewCell", bundle: nil), forCellReuseIdentifier: "customTableViewCell")
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell", for: indexPath) as? CustomizacaoTableViewCell else {
             fatalError("A célula não existe!")
         }
         let cellVM = dataViewModel.getCellViewModel( at: indexPath )
