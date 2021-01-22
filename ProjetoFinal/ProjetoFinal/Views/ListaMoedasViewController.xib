@@ -22,24 +22,67 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oZM-Pm-kdI">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="183" width="414" height="679"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="EeR-xM-UCC">
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="EeR-xM-UCC">
                     <rect key="frame" x="197" y="438" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </activityIndicatorView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONF-h1-NWF">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="183"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="3Sh-9o-AhI">
+                            <rect key="frame" x="0.0" y="127" width="414" height="56"/>
+                            <color key="barTintColor" red="0.10196078431372549" green="0.098039215686274508" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>Title</string>
+                                <string>Title</string>
+                            </scopeButtonTitles>
+                        </searchBar>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Jan 2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SrG-yF-fEi">
+                            <rect key="frame" x="128" y="90" width="158" height="17"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
+                            <color key="textColor" red="0.94117647058823528" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moeda Digital" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngL-f4-juX">
+                            <rect key="frame" x="95.5" y="53.5" width="223" height="31.5"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                            <color key="textColor" red="0.94117647058823528" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.10196078431372549" green="0.098039215686274508" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="3Sh-9o-AhI" firstAttribute="leading" secondItem="ONF-h1-NWF" secondAttribute="leading" id="2DL-UD-Yvy"/>
+                        <constraint firstAttribute="height" constant="183" id="3tr-Co-WEe"/>
+                        <constraint firstItem="3Sh-9o-AhI" firstAttribute="top" secondItem="SrG-yF-fEi" secondAttribute="bottom" constant="20" id="5u5-Zw-MNp"/>
+                        <constraint firstItem="SrG-yF-fEi" firstAttribute="top" secondItem="ngL-f4-juX" secondAttribute="bottom" constant="5" id="JWt-bk-nCk"/>
+                        <constraint firstItem="SrG-yF-fEi" firstAttribute="leading" secondItem="ONF-h1-NWF" secondAttribute="leading" constant="128" id="Kdn-hH-zGs"/>
+                        <constraint firstAttribute="width" constant="414" id="L0K-85-9TN"/>
+                        <constraint firstAttribute="bottom" secondItem="3Sh-9o-AhI" secondAttribute="bottom" id="dbW-IB-zeJ"/>
+                        <constraint firstAttribute="trailing" secondItem="ngL-f4-juX" secondAttribute="trailing" constant="95.5" id="dfV-LD-8tb"/>
+                        <constraint firstAttribute="trailing" secondItem="3Sh-9o-AhI" secondAttribute="trailing" id="iHh-j7-5sJ"/>
+                        <constraint firstAttribute="trailing" secondItem="SrG-yF-fEi" secondAttribute="trailing" constant="128" id="nL5-Xw-y5M"/>
+                        <constraint firstItem="ngL-f4-juX" firstAttribute="leading" secondItem="ONF-h1-NWF" secondAttribute="leading" constant="95.5" id="uj2-ZV-cGo"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oZM-Pm-kdI" secondAttribute="bottom" id="5qz-gA-GTX"/>
-                <constraint firstItem="EeR-xM-UCC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="6rM-4S-UzE"/>
-                <constraint firstItem="oZM-Pm-kdI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7Ny-iC-SiY"/>
-                <constraint firstItem="EeR-xM-UCC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8Gc-pr-ZHk"/>
-                <constraint firstItem="oZM-Pm-kdI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DEc-wg-3t1"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oZM-Pm-kdI" secondAttribute="trailing" id="F7s-sR-PQY"/>
+                <constraint firstItem="ONF-h1-NWF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="962-YI-9uT"/>
+                <constraint firstItem="ONF-h1-NWF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DQC-dt-81e"/>
+                <constraint firstItem="oZM-Pm-kdI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Mek-9Z-E5v"/>
+                <constraint firstItem="oZM-Pm-kdI" firstAttribute="top" secondItem="ONF-h1-NWF" secondAttribute="bottom" id="ORv-Ci-ZMn"/>
+                <constraint firstItem="oZM-Pm-kdI" firstAttribute="top" secondItem="ONF-h1-NWF" secondAttribute="bottom" id="XKz-9e-It7"/>
+                <constraint firstItem="oZM-Pm-kdI" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="ZV0-1Y-Zfb"/>
+                <constraint firstItem="oZM-Pm-kdI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="clY-VI-chZ"/>
+                <constraint firstItem="ONF-h1-NWF" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="vd8-A7-3Gm"/>
             </constraints>
-            <point key="canvasLocation" x="59" y="94"/>
+            <point key="canvasLocation" x="57.971014492753625" y="93.75"/>
         </view>
     </objects>
     <resources>

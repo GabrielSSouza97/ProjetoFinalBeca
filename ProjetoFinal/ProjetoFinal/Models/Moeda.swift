@@ -12,8 +12,8 @@ struct Moeda : Decodable {
     var siglaMoeda: String
     var name: String?
     var priceUSD: Double?
-    var volumeHora: Double
-    var volumeDia: Double
+    var volumeHora: Double?
+    var volumeDia: Double?
     var volumeMes: Double
     var idIcon: String?
     
