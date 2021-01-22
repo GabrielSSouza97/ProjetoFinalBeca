@@ -24,7 +24,7 @@
                             <constraint firstAttribute="width" constant="197" id="kXI-Yy-s0H"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                        <color key="textColor" red="0.94117647058823528" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="textColor" red="0.68235294120000001" green="0.67843137249999996" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfn-ql-2Xs">
@@ -34,7 +34,7 @@
                             <constraint firstAttribute="width" constant="88" id="yyJ-8O-Lka"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
-                        <color key="textColor" red="0.94117647058823528" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="textColor" red="0.68235294120000001" green="0.67843137249999996" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p5E-fe-OGP">
@@ -51,7 +51,7 @@
                             <constraint firstAttribute="height" constant="21" id="HsY-Ri-cb7"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                        <color key="textColor" red="0.94117647058823528" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="textColor" red="0.68235294120000001" green="0.67843137249999996" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nzs-T9-sI3">

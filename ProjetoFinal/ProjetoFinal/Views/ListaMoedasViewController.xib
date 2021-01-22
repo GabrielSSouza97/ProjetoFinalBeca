@@ -44,13 +44,13 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Jan 2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SrG-yF-fEi">
                             <rect key="frame" x="128" y="90" width="158" height="17"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
-                            <color key="textColor" red="0.94117647058823528" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="textColor" red="0.68235294120000001" green="0.67843137249999996" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moeda Digital" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngL-f4-juX">
                             <rect key="frame" x="95.5" y="53.5" width="223" height="31.5"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
-                            <color key="textColor" red="0.94117647058823528" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="textColor" red="0.68235294117647061" green="0.67843137254901964" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>

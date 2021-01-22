@@ -70,6 +70,8 @@ extension ListaMoedasViewController: UITableViewDataSource {
         let cellVM = dataViewModel.getCellViewModel( at: indexPath )
         cell.siglaLabel.text = cellVM.siglaText
         cell.nomeLabel.text = cellVM.nomeText
+        cell.cotacaoLabel.text = String(cellVM.cotacaoText)
+        
         return cell
     
     }
