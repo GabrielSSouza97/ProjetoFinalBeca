@@ -18,22 +18,22 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTU-DN-akb">
-                        <rect key="frame" x="74" y="13" width="88" height="21"/>
+                        <rect key="frame" x="74" y="13" width="197" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="6nC-59-4pt"/>
-                            <constraint firstAttribute="width" constant="88" id="kXI-Yy-s0H"/>
+                            <constraint firstAttribute="width" constant="197" id="kXI-Yy-s0H"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                         <color key="textColor" red="0.94117647058823528" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfn-ql-2Xs">
-                        <rect key="frame" x="74" y="32" width="88" height="21"/>
+                        <rect key="frame" x="74" y="38" width="88" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="tNX-CT-RtP"/>
                             <constraint firstAttribute="width" constant="88" id="yyJ-8O-Lka"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                         <color key="textColor" red="0.94117647058823528" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -45,7 +45,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$31,010.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWf-Bl-t58">
-                        <rect key="frame" x="211" y="25" width="94" height="21"/>
+                        <rect key="frame" x="211" y="39" width="94" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="94" id="FZX-Dy-eC3"/>
                             <constraint firstAttribute="height" constant="21" id="HsY-Ri-cb7"/>
@@ -55,7 +55,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nzs-T9-sI3">
-                        <rect key="frame" x="175" y="13" width="10" height="10"/>
+                        <rect key="frame" x="284" y="13" width="10" height="10"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="10" id="h4Y-2E-P3m"/>
                             <constraint firstAttribute="height" constant="10" id="kI8-Xz-t69"/>
@@ -66,8 +66,8 @@
                 <constraints>
                     <constraint firstItem="nzs-T9-sI3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="2zc-Ls-LWo"/>
                     <constraint firstItem="p5E-fe-OGP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="AHA-PL-BbE"/>
-                    <constraint firstAttribute="bottom" secondItem="yfn-ql-2Xs" secondAttribute="bottom" constant="18" id="I39-P4-waH"/>
-                    <constraint firstItem="lWf-Bl-t58" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="Itd-un-9sh"/>
+                    <constraint firstAttribute="bottom" secondItem="yfn-ql-2Xs" secondAttribute="bottom" constant="12" id="I39-P4-waH"/>
+                    <constraint firstItem="lWf-Bl-t58" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="39" id="Itd-un-9sh"/>
                     <constraint firstItem="p5E-fe-OGP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="OI8-Ib-cYZ"/>
                     <constraint firstItem="OTU-DN-akb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="PEu-6s-v0G"/>
                     <constraint firstItem="yfn-ql-2Xs" firstAttribute="leading" secondItem="p5E-fe-OGP" secondAttribute="trailing" constant="14" id="lt9-1E-mLY"/>
@@ -80,6 +80,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" red="0.1019607843" green="0.098039215690000001" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <connections>
+                <outlet property="cotacaoLabel" destination="lWf-Bl-t58" id="uWD-6J-czz"/>
+                <outlet property="imagemFavorito" destination="nzs-T9-sI3" id="2Zm-Ww-YPE"/>
+                <outlet property="imagemMoeda" destination="p5E-fe-OGP" id="Yd5-Nm-v31"/>
                 <outlet property="nomeLabel" destination="OTU-DN-akb" id="Rpi-gO-7Tb"/>
                 <outlet property="siglaLabel" destination="yfn-ql-2Xs" id="NiG-bR-U93"/>
             </connections>

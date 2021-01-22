@@ -68,8 +68,8 @@ extension ListaMoedasViewController: UITableViewDataSource {
             fatalError("A célula não existe!")
         }
         let cellVM = dataViewModel.getCellViewModel( at: indexPath )
-        cell.siglaLabel.text = cellVM.titleText
-        cell.nomeLabel.text = cellVM.subTitleText
+        cell.siglaLabel.text = cellVM.siglaText
+        cell.nomeLabel.text = cellVM.nomeText
         return cell
     
     }

@@ -47,14 +47,15 @@ class DataViewModel {
         self.moedas = moedas
         var vms = [DataListCellViewModel]()
         for data in moedas {
-            vms.append(DataListCellViewModel(titleText: String(data.volumeMes), subTitleText: data.siglaMoeda))
+            vms.append(DataListCellViewModel(nomeText: String(data.name ?? ""), siglaText: data.siglaMoeda))
         }
         cellViewModels = vms
     }
 }
 
 struct DataListCellViewModel {
-    let titleText: String
-    let subTitleText: String
+    let nomeText: String
+    let siglaText: String
+    //let cotacaoText: Double
 }
 

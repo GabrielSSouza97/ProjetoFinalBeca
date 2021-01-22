@@ -11,6 +11,9 @@ class CustomizacaoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var siglaLabel: UILabel!
     @IBOutlet weak var nomeLabel: UILabel!
+    @IBOutlet weak var imagemMoeda: UIImageView!
+    @IBOutlet weak var cotacaoLabel: UILabel!
+    @IBOutlet weak var imagemFavorito: UIImageView!
     
 
     override func awakeFromNib() {
