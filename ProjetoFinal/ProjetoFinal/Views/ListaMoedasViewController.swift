@@ -12,6 +12,7 @@ class ListaMoedasViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var dataLabel: UILabel!
     
     init() {
         super.init(nibName: "ListaMoedasViewController", bundle: nil)
@@ -32,10 +33,13 @@ class ListaMoedasViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         tableView.dataSource = self
         
+        dataLabel.text = Date().dateString()
+        
 //        let tabBar = UITabBarController()
 //        tabBar.
         
         initViewModel()
+        
     }
 
     
@@ -84,5 +88,18 @@ extension ListaMoedasViewController: UITableViewDataSource {
     }
     
 }
+
+extension Date {
+    func dateString() -> String {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "d MMM yyyy"
+        let result = formatter.string(from: date)
+        
+        return result
+    }
+}
+
+
 
 
