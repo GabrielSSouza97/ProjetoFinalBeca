@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ListaMoedasViewController: UIViewController {
 
@@ -71,6 +72,12 @@ extension ListaMoedasViewController: UITableViewDataSource {
         cell.siglaLabel.text = cellVM.siglaText
         cell.nomeLabel.text = cellVM.nomeText
         cell.cotacaoLabel.text = String(cellVM.cotacaoText)
+        
+        let url = cellVM.imagemURL
+        let newUrl = url.replacingOccurrences(of: "-", with: "")
+        guard let imageUrl = URL(string: "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/\(newUrl).png") else { return UITableViewCell()}
+        
+        cell.imagemMoeda.af_setImage(withURL: imageUrl)
         
         return cell
     

@@ -47,7 +47,7 @@ class DataViewModel {
         self.moedas = moedas
         var vms = [DataListCellViewModel]()
         for data in moedas {
-            vms.append(DataListCellViewModel(nomeText: data.name ?? "", siglaText: data.siglaMoeda, cotacaoText: data.priceUSD ?? 0))
+            vms.append(DataListCellViewModel(nomeText: data.name ?? "", siglaText: data.siglaMoeda, cotacaoText: data.priceUSD ?? 0, imagemURL: data.idIcon ?? ""))
         }
         cellViewModels = vms
     }
@@ -57,5 +57,6 @@ struct DataListCellViewModel {
     let nomeText: String
     let siglaText: String
     let cotacaoText: Double
+    let imagemURL: String
 }
 
