@@ -52,6 +52,7 @@ class DataViewModel {
         }
         cellViewModels = vms
     }
+
 }
 
 struct DataListCellViewModel {

@@ -25,8 +25,55 @@ class MoedaService : MoedaServiceProtocol {
                 complete(true, events)
             case .failure(let error):
                 print(error)
+                
+                if let httpResponse =  apiResponse.response?.statusCode {
+                    switch httpResponse {
+                    case 400:
+                        self.alertWindow(title: "Erro 400: Bad Request", message: "Falha na requisição dos dados, sintaxe inválida!")
+                    case 401:
+                        self.alertWindow(title: "Erro 401: Unauthorized", message: "Falha na requisição dos dados, autenticação inválida!")
+                    case 403:
+                        self.alertWindow(title: "Erro 403: Forbidden", message: "Falha na requisição dos dados, sem permissão para acesso!")
+                    case 429:
+                        self.alertWindow(title: "Erro 429: Too Many Requests", message: "Falha na requisição dos dados, quantidade de requisicições excedida!")
+                    case 550:
+                        self.alertWindow(title: "Erro 550: No Data", message: "Falha na requisição dos dados, o dado não existe!")
+                        break
+                    default:
+                        break
+                    }
+                }
+                
             }
         }
+    }
+    
+}
+
+
+extension MoedaService {
+
+    func alertWindow(title: String, message: String) {
+        DispatchQueue.main.async(execute: {
+            let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+            alertWindow.rootViewController = UIViewController()
+            alertWindow.windowLevel = UIWindow.Level.alert + 1
+
+            let alerta = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            
+            
+            let tentarNovamente = UIAlertAction(title: "Tente novamente", style: .default, handler: { action in
+                //ListaMoedasViewController().initViewModel()
+            })
+            alerta.addAction(tentarNovamente)
+
+            let cancelar = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+            alerta.addAction(cancelar)
+
+            alertWindow.makeKeyAndVisible()
+
+            alertWindow.rootViewController?.present(alerta, animated: true, completion: nil)
+        })
     }
     
 }
