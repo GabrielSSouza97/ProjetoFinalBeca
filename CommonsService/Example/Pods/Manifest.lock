@@ -1,0 +1,16 @@
+PODS:
+  - CommonsService (1.2.0)
+
+DEPENDENCIES:
+  - CommonsService (from `../`)
+
+EXTERNAL SOURCES:
+  CommonsService:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CommonsService: 87db8c694dbfdc58162415fd7d320fe9f0c79fee
+
+PODFILE CHECKSUM: ee23547868e79d234474a114d6b6a9c926b9074f
+
+COCOAPODS: 1.10.1
