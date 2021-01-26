@@ -10,7 +10,6 @@
 		159E873D8C084BCFA3495D7B /* Pods_ProjetoFinalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593604DE3CBA8B2A1F7CA1D7 /* Pods_ProjetoFinalTests.framework */; };
 		981C798FE14FD4767736C308 /* Pods_ProjetoFinal_ProjetoFinalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78628D7B0E7FA798FDAAF049 /* Pods_ProjetoFinal_ProjetoFinalUITests.framework */; };
 		F72FA4416248104C6898E328 /* Pods_ProjetoFinal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9567F852488B8ED7C33BC0D /* Pods_ProjetoFinal.framework */; };
-		FC2D381725BB0229005D2399 /* Moeda.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D381625BB0229005D2399 /* Moeda.swift */; };
 		FC2D382125BB04B0005D2399 /* MoedaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D382025BB04B0005D2399 /* MoedaService.swift */; };
 		FC2D382A25BB0838005D2399 /* ListaMoedasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D382825BB0838005D2399 /* ListaMoedasViewController.swift */; };
 		FC2D382B25BB0838005D2399 /* ListaMoedasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2D382925BB0838005D2399 /* ListaMoedasViewController.xib */; };
@@ -54,7 +53,6 @@
 		B40D7ED7F8FD887B584565B0 /* Pods-ProjetoFinal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoFinal.debug.xcconfig"; path = "Target Support Files/Pods-ProjetoFinal/Pods-ProjetoFinal.debug.xcconfig"; sourceTree = "<group>"; };
 		C9567F852488B8ED7C33BC0D /* Pods_ProjetoFinal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjetoFinal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7209DD9164CEAEDF237549A /* Pods-ProjetoFinalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoFinalTests.debug.xcconfig"; path = "Target Support Files/Pods-ProjetoFinalTests/Pods-ProjetoFinalTests.debug.xcconfig"; sourceTree = "<group>"; };
-		FC2D381625BB0229005D2399 /* Moeda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moeda.swift; sourceTree = "<group>"; };
 		FC2D382025BB04B0005D2399 /* MoedaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaService.swift; sourceTree = "<group>"; };
 		FC2D382825BB0838005D2399 /* ListaMoedasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaMoedasViewController.swift; sourceTree = "<group>"; };
 		FC2D382925BB0838005D2399 /* ListaMoedasViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaMoedasViewController.xib; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 		FC2D380E25BB013D005D2399 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FC2D381625BB0229005D2399 /* Moeda.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -477,7 +474,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC2D382125BB04B0005D2399 /* MoedaService.swift in Sources */,
-				FC2D381725BB0229005D2399 /* Moeda.swift in Sources */,
 				FC2D383725BB0B73005D2399 /* DataViewModel.swift in Sources */,
 				FC2D382A25BB0838005D2399 /* ListaMoedasViewController.swift in Sources */,
 				FC3EAC9B25B9CB8B00643728 /* ViewController.swift in Sources */,

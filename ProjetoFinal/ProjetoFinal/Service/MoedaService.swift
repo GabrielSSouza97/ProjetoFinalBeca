@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Alamofire
+import CommonsService
 
 protocol MoedaServiceProtocol {
     func getDataFromServer(complete: @escaping (_ success: Bool, _ moeda: [Moeda]? )->() )

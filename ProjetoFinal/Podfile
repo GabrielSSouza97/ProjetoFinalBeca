@@ -7,6 +7,9 @@ target 'ProjetoFinal' do
 
   pod 'Alamofire', '~> 5.4.1'
   pod 'AlamofireImage', '~> 4.1.0'
+  pod 'CommonsService',
+  :git => 'https://github.com/leticiassiqueira25/Commons.git',
+  :branch => ‘master'
 
   target 'ProjetoFinalTests' do
     inherit! :search_paths
