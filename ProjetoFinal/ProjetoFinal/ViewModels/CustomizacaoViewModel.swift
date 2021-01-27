@@ -1,14 +1,14 @@
 //
-//  DataViewModel.swift
+//  CustomizacaoViewModel.swift
 //  ProjetoFinal
 //
-//  Created by Leticia Sousa Siqueira on 22/01/21.
+//  Created by Leticia Sousa Siqueira on 27/01/21.
 //
 
 import UIKit
 import CommonsService
 
-class DataViewModel {
+class CustomizacaoViewModel {
     
     var moedas: [Moeda] = [Moeda]()
     var reloadTableView: (()->())?

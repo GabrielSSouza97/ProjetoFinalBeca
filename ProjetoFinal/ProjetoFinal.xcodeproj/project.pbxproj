@@ -15,7 +15,6 @@
 		FC2D382B25BB0838005D2399 /* ListaMoedasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2D382925BB0838005D2399 /* ListaMoedasViewController.xib */; };
 		FC2D383125BB090A005D2399 /* CustomizacaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D382F25BB090A005D2399 /* CustomizacaoTableViewCell.swift */; };
 		FC2D383225BB090A005D2399 /* CustomizacaoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2D383025BB090A005D2399 /* CustomizacaoTableViewCell.xib */; };
-		FC2D383725BB0B73005D2399 /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D383625BB0B73005D2399 /* DataViewModel.swift */; };
 		FC2D383C25BB0C3E005D2399 /* ExtensionsListaMoedasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D383B25BB0C3E005D2399 /* ExtensionsListaMoedasViewController.swift */; };
 		FC3EAC9725B9CB8B00643728 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3EAC9625B9CB8B00643728 /* AppDelegate.swift */; };
 		FC3EAC9925B9CB8B00643728 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3EAC9825B9CB8B00643728 /* SceneDelegate.swift */; };
@@ -23,6 +22,7 @@
 		FC3EACA325B9CB9100643728 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3EACA125B9CB9100643728 /* LaunchScreen.storyboard */; };
 		FC3EACAE25B9CB9200643728 /* ProjetoFinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3EACAD25B9CB9200643728 /* ProjetoFinalTests.swift */; };
 		FC3EACB925B9CB9200643728 /* ProjetoFinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3EACB825B9CB9200643728 /* ProjetoFinalUITests.swift */; };
+		FC46B65025C1E34000C1FBD7 /* CustomizacaoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46B64F25C1E34000C1FBD7 /* CustomizacaoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,6 @@
 		FC2D382925BB0838005D2399 /* ListaMoedasViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaMoedasViewController.xib; sourceTree = "<group>"; };
 		FC2D382F25BB090A005D2399 /* CustomizacaoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizacaoTableViewCell.swift; sourceTree = "<group>"; };
 		FC2D383025BB090A005D2399 /* CustomizacaoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomizacaoTableViewCell.xib; sourceTree = "<group>"; };
-		FC2D383625BB0B73005D2399 /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
 		FC2D383B25BB0C3E005D2399 /* ExtensionsListaMoedasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsListaMoedasViewController.swift; sourceTree = "<group>"; };
 		FC3EAC9325B9CB8B00643728 /* ProjetoFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3EAC9625B9CB8B00643728 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		FC3EACB425B9CB9200643728 /* ProjetoFinalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetoFinalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3EACB825B9CB9200643728 /* ProjetoFinalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetoFinalUITests.swift; sourceTree = "<group>"; };
 		FC3EACBA25B9CB9200643728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC46B64F25C1E34000C1FBD7 /* CustomizacaoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizacaoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +145,7 @@
 		FC2D380F25BB0142005D2399 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				FC2D383625BB0B73005D2399 /* DataViewModel.swift */,
+				FC46B64F25C1E34000C1FBD7 /* CustomizacaoViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -471,9 +471,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC2D382125BB04B0005D2399 /* MoedaService.swift in Sources */,
-				FC2D383725BB0B73005D2399 /* DataViewModel.swift in Sources */,
 				FC2D382A25BB0838005D2399 /* ListaMoedasViewController.swift in Sources */,
 				FC3EAC9725B9CB8B00643728 /* AppDelegate.swift in Sources */,
+				FC46B65025C1E34000C1FBD7 /* CustomizacaoViewModel.swift in Sources */,
 				FC2D383C25BB0C3E005D2399 /* ExtensionsListaMoedasViewController.swift in Sources */,
 				FC3EAC9925B9CB8B00643728 /* SceneDelegate.swift in Sources */,
 				FC2D383125BB090A005D2399 /* CustomizacaoTableViewCell.swift in Sources */,

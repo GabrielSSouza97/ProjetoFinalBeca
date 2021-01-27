@@ -10,10 +10,17 @@ import AlamofireImage
 import CommonsService
 
 class ListaMoedasViewController: UIViewController {
+    
+    // MARK: - IBOutlets
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var dataLabel: UILabel!
+    
+    // MARK: Attributes
+    
+    var customViewModel = CustomizacaoViewModel()
+    let formataNumero = FormataNumero()
     
     init() {
         super.init(nibName: "ListaMoedasViewController", bundle: nil)
@@ -23,7 +30,7 @@ class ListaMoedasViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    var dataViewModel = DataViewModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,28 +46,32 @@ class ListaMoedasViewController: UIViewController {
         
     }
 
+// MARK: - Methods
     
     func initViewModel(){
-        dataViewModel.reloadTableView = {
+        customViewModel.reloadTableView = {
             DispatchQueue.main.async { self.tableView.reloadData() }
         }
-        dataViewModel.showError = {
+        customViewModel.showError = {
             DispatchQueue.main.async { self.showAlert("Algo deu errado!") }
         }
-        dataViewModel.showLoading = {
+        customViewModel.showLoading = {
             DispatchQueue.main.async { self.activityIndicator.startAnimating() }
         }
-        dataViewModel.hideLoading = {
+        customViewModel.hideLoading = {
             DispatchQueue.main.async { self.activityIndicator.stopAnimating() }
         }
-        dataViewModel.getData()
+        customViewModel.getData()
     }
+    
 }
+
+// MARK: - Extension
 
 extension ListaMoedasViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataViewModel.numberOfCells
+        return customViewModel.numberOfCells
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -69,10 +80,11 @@ extension ListaMoedasViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell", for: indexPath) as? CustomizacaoTableViewCell else {
             fatalError("A célula não existe!")
         }
-        let cellVM = dataViewModel.getCellViewModel( at: indexPath )
+        
+        let cellVM = customViewModel.getCellViewModel( at: indexPath )
         cell.siglaLabel.text = cellVM.siglaText
         cell.nomeLabel.text = cellVM.nomeText
-        cell.cotacaoLabel.text = FormataNumero().formatarCotacao(cotacao: cellVM.cotacaoText)
+        cell.cotacaoLabel.text = formataNumero.formatarCotacao(cotacao: cellVM.cotacaoText)
         
         
         let url = cellVM.imagemURL

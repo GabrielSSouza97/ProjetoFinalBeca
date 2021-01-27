@@ -18,12 +18,12 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTU-DN-akb">
-                        <rect key="frame" x="74" y="13" width="197" height="21"/>
+                        <rect key="frame" x="74" y="10" width="197" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="6nC-59-4pt"/>
                             <constraint firstAttribute="width" constant="197" id="kXI-Yy-s0H"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                         <color key="textColor" red="0.68235294120000001" green="0.67843137249999996" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -45,12 +45,12 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$31,010.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWf-Bl-t58">
-                        <rect key="frame" x="195" y="39" width="110" height="21"/>
+                        <rect key="frame" x="195" y="35" width="110" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="110" id="FZX-Dy-eC3"/>
                             <constraint firstAttribute="height" constant="21" id="HsY-Ri-cb7"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                         <color key="textColor" red="0.68235294120000001" green="0.67843137249999996" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -67,9 +67,9 @@
                     <constraint firstItem="nzs-T9-sI3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="2zc-Ls-LWo"/>
                     <constraint firstItem="p5E-fe-OGP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="AHA-PL-BbE"/>
                     <constraint firstAttribute="bottom" secondItem="yfn-ql-2Xs" secondAttribute="bottom" constant="12" id="I39-P4-waH"/>
-                    <constraint firstItem="lWf-Bl-t58" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="39" id="Itd-un-9sh"/>
+                    <constraint firstItem="lWf-Bl-t58" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="Itd-un-9sh"/>
                     <constraint firstItem="p5E-fe-OGP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="OI8-Ib-cYZ"/>
-                    <constraint firstItem="OTU-DN-akb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="PEu-6s-v0G"/>
+                    <constraint firstItem="OTU-DN-akb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="PEu-6s-v0G"/>
                     <constraint firstItem="yfn-ql-2Xs" firstAttribute="leading" secondItem="p5E-fe-OGP" secondAttribute="trailing" constant="14" id="lt9-1E-mLY"/>
                     <constraint firstAttribute="trailing" secondItem="lWf-Bl-t58" secondAttribute="trailing" constant="15" id="mQW-Tv-2Uo"/>
                     <constraint firstItem="OTU-DN-akb" firstAttribute="leading" secondItem="p5E-fe-OGP" secondAttribute="trailing" constant="14" id="owt-jj-RbL"/>
