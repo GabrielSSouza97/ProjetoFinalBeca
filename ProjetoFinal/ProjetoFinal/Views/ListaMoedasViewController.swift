@@ -22,10 +22,6 @@ class ListaMoedasViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//    }
-    
     var dataViewModel = DataViewModel()
 
     override func viewDidLoad() {
@@ -75,7 +71,17 @@ extension ListaMoedasViewController: UITableViewDataSource {
         let cellVM = dataViewModel.getCellViewModel( at: indexPath )
         cell.siglaLabel.text = cellVM.siglaText
         cell.nomeLabel.text = cellVM.nomeText
-        cell.cotacaoLabel.text = String(cellVM.cotacaoText)
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.decimalSeparator = "."
+        formatter.groupingSeparator = ","
+        let number = NSNumber(value: cellVM.cotacaoText)
+        let formattedValue = formatter.string(from: number)!
+            
+        cell.cotacaoLabel.text = "$\(formattedValue)"
+        
         
         let url = cellVM.imagemURL
         let newUrl = url.replacingOccurrences(of: "-", with: "")
@@ -100,18 +106,3 @@ extension Date {
     }
 }
 
-extension  UIViewController {
-
-    func showAlert(withTitle title: String, withMessage message:String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
-        })
-        let cancel = UIAlertAction(title: "Cancel", style: .default, handler: { action in
-        })
-        alert.addAction(ok)
-        alert.addAction(cancel)
-        DispatchQueue.main.async(execute: {
-            self.present(alert, animated: true)
-        })
-    }
-}
