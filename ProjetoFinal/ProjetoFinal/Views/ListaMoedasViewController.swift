@@ -7,6 +7,7 @@
 
 import UIKit
 import AlamofireImage
+import CommonsService
 
 class ListaMoedasViewController: UIViewController {
 
@@ -71,16 +72,7 @@ extension ListaMoedasViewController: UITableViewDataSource {
         let cellVM = dataViewModel.getCellViewModel( at: indexPath )
         cell.siglaLabel.text = cellVM.siglaText
         cell.nomeLabel.text = cellVM.nomeText
-        
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.maximumFractionDigits = 2
-        formatter.decimalSeparator = "."
-        formatter.groupingSeparator = ","
-        let number = NSNumber(value: cellVM.cotacaoText)
-        let formattedValue = formatter.string(from: number)!
-            
-        cell.cotacaoLabel.text = "$\(formattedValue)"
+        cell.cotacaoLabel.text = FormataNumero().formatarCotacao(cotacao: cellVM.cotacaoText)
         
         
         let url = cellVM.imagemURL

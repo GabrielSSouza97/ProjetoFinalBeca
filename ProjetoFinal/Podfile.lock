@@ -2,7 +2,7 @@ PODS:
   - Alamofire (5.4.1)
   - AlamofireImage (4.1.0):
     - Alamofire (~> 5.1)
-  - CommonsService (1.2.0)
+  - CommonsService (1.3.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.4.1)
@@ -21,13 +21,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CommonsService:
-    :commit: b4486a79f064e762087c1fab72b00213c1ea4a95
+    :commit: f449848b9beeb20621a767e0d6fdf73d8a99959a
     :git: https://github.com/leticiassiqueira25/Commons.git
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
-  CommonsService: 87db8c694dbfdc58162415fd7d320fe9f0c79fee
+  CommonsService: ea1b6a91b995137b2d52f5361917c44846a0d393
 
 PODFILE CHECKSUM: 1df1d73c4e677eff20fcb5fcaa9795719ec1f3b1
 
