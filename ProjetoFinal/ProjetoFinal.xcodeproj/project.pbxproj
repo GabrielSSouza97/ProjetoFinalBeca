@@ -19,7 +19,6 @@
 		FC2D383C25BB0C3E005D2399 /* ExtensionsListaMoedasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D383B25BB0C3E005D2399 /* ExtensionsListaMoedasViewController.swift */; };
 		FC3EAC9725B9CB8B00643728 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3EAC9625B9CB8B00643728 /* AppDelegate.swift */; };
 		FC3EAC9925B9CB8B00643728 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3EAC9825B9CB8B00643728 /* SceneDelegate.swift */; };
-		FC3EAC9B25B9CB8B00643728 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3EAC9A25B9CB8B00643728 /* ViewController.swift */; };
 		FC3EACA025B9CB9100643728 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3EAC9F25B9CB9100643728 /* Assets.xcassets */; };
 		FC3EACA325B9CB9100643728 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3EACA125B9CB9100643728 /* LaunchScreen.storyboard */; };
 		FC3EACAE25B9CB9200643728 /* ProjetoFinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3EACAD25B9CB9200643728 /* ProjetoFinalTests.swift */; };
@@ -63,7 +62,6 @@
 		FC3EAC9325B9CB8B00643728 /* ProjetoFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3EAC9625B9CB8B00643728 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC3EAC9825B9CB8B00643728 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC3EAC9A25B9CB8B00643728 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC3EAC9F25B9CB9100643728 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3EACA225B9CB9100643728 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC3EACA425B9CB9100643728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 		FC2D381125BB0154005D2399 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FC3EAC9A25B9CB8B00643728 /* ViewController.swift */,
 				FC2D382825BB0838005D2399 /* ListaMoedasViewController.swift */,
 				FC2D382925BB0838005D2399 /* ListaMoedasViewController.xib */,
 				FC2D382F25BB090A005D2399 /* CustomizacaoTableViewCell.swift */,
@@ -476,7 +473,6 @@
 				FC2D382125BB04B0005D2399 /* MoedaService.swift in Sources */,
 				FC2D383725BB0B73005D2399 /* DataViewModel.swift in Sources */,
 				FC2D382A25BB0838005D2399 /* ListaMoedasViewController.swift in Sources */,
-				FC3EAC9B25B9CB8B00643728 /* ViewController.swift in Sources */,
 				FC3EAC9725B9CB8B00643728 /* AppDelegate.swift in Sources */,
 				FC2D383C25BB0C3E005D2399 /* ExtensionsListaMoedasViewController.swift in Sources */,
 				FC3EAC9925B9CB8B00643728 /* SceneDelegate.swift in Sources */,

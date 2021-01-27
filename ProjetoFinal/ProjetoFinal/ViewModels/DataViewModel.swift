@@ -16,6 +16,11 @@ class DataViewModel {
     var showLoading: (()->())?
     var hideLoading: (()->())?
     
+    let moedaService: MoedaService
+    
+    init(moedaService: MoedaService = MoedaService()) {
+        self.moedaService = moedaService
+    }
     
     private var cellViewModels: [DataListCellViewModel] = [DataListCellViewModel]() {
         didSet {
@@ -25,7 +30,7 @@ class DataViewModel {
     
     func getData(){
         showLoading?()
-        MoedaService().getDataFromServer { (success, moeda) in
+        moedaService.getDataFromServer { (success, moeda) in
             self.hideLoading?()
             if success {
                 self.createCell(moedas: moeda!)

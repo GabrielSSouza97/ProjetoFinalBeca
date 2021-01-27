@@ -22,9 +22,9 @@ class ListaMoedasViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    var dataViewModel = DataViewModel()
 
+    var dataViewModel = DataViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
