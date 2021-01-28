@@ -23,6 +23,8 @@
 		FC3EACAE25B9CB9200643728 /* ProjetoFinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3EACAD25B9CB9200643728 /* ProjetoFinalTests.swift */; };
 		FC3EACB925B9CB9200643728 /* ProjetoFinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3EACB825B9CB9200643728 /* ProjetoFinalUITests.swift */; };
 		FC46B65025C1E34000C1FBD7 /* CustomizacaoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46B64F25C1E34000C1FBD7 /* CustomizacaoViewModel.swift */; };
+		FC46B68C25C2F68900C1FBD7 /* DetalhesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC46B68A25C2F68900C1FBD7 /* DetalhesViewController.xib */; };
+		FC46B68D25C2F68900C1FBD7 /* DetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46B68B25C2F68900C1FBD7 /* DetalhesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		FC3EACB825B9CB9200643728 /* ProjetoFinalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetoFinalUITests.swift; sourceTree = "<group>"; };
 		FC3EACBA25B9CB9200643728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC46B64F25C1E34000C1FBD7 /* CustomizacaoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizacaoViewModel.swift; sourceTree = "<group>"; };
+		FC46B68A25C2F68900C1FBD7 /* DetalhesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetalhesViewController.xib; sourceTree = "<group>"; };
+		FC46B68B25C2F68900C1FBD7 /* DetalhesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,8 @@
 				FC2D382925BB0838005D2399 /* ListaMoedasViewController.xib */,
 				FC2D382F25BB090A005D2399 /* CustomizacaoTableViewCell.swift */,
 				FC2D383025BB090A005D2399 /* CustomizacaoTableViewCell.xib */,
+				FC46B68B25C2F68900C1FBD7 /* DetalhesViewController.swift */,
+				FC46B68A25C2F68900C1FBD7 /* DetalhesViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 			files = (
 				FC2D382B25BB0838005D2399 /* ListaMoedasViewController.xib in Resources */,
 				FC3EACA325B9CB9100643728 /* LaunchScreen.storyboard in Resources */,
+				FC46B68C25C2F68900C1FBD7 /* DetalhesViewController.xib in Resources */,
 				FC3EACA025B9CB9100643728 /* Assets.xcassets in Resources */,
 				FC2D383225BB090A005D2399 /* CustomizacaoTableViewCell.xib in Resources */,
 			);
@@ -470,6 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC46B68D25C2F68900C1FBD7 /* DetalhesViewController.swift in Sources */,
 				FC2D382125BB04B0005D2399 /* MoedaService.swift in Sources */,
 				FC2D382A25BB0838005D2399 /* ListaMoedasViewController.swift in Sources */,
 				FC3EAC9725B9CB8B00643728 /* AppDelegate.swift in Sources */,

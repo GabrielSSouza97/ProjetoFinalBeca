@@ -19,10 +19,15 @@ class ListaMoedasViewController: UIViewController {
     
     // MARK: Attributes
     
-    var customViewModel = CustomizacaoViewModel()
-    let formataNumero = FormataNumero()
+    var customViewModel: CustomizacaoViewModel
+    let formataNumero: FormataNumero
     
-    init() {
+    var moedas: Array<Moeda> = []
+
+    
+    init(customViewModel: CustomizacaoViewModel = CustomizacaoViewModel(), formataNumero: FormataNumero = FormataNumero()) {
+        self.customViewModel = customViewModel
+        self.formataNumero = formataNumero
         super.init(nibName: "ListaMoedasViewController", bundle: nil)
     }
     
@@ -35,7 +40,9 @@ class ListaMoedasViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+
         tableView.dataSource = self
+        tableView.delegate = self
         
         dataLabel.text = Date().dateString()
         
@@ -60,6 +67,7 @@ class ListaMoedasViewController: UIViewController {
         }
         customViewModel.hideLoading = {
             DispatchQueue.main.async { self.activityIndicator.stopAnimating() }
+            self.activityIndicator.hidesWhenStopped = true
         }
         customViewModel.getData()
     }
@@ -82,6 +90,7 @@ extension ListaMoedasViewController: UITableViewDataSource {
         }
         
         let cellVM = customViewModel.getCellViewModel( at: indexPath )
+        moedas = customViewModel.moedas
         cell.siglaLabel.text = cellVM.siglaText
         cell.nomeLabel.text = cellVM.nomeText
         cell.cotacaoLabel.text = formataNumero.formatarCotacao(cotacao: cellVM.cotacaoText)
@@ -95,6 +104,15 @@ extension ListaMoedasViewController: UITableViewDataSource {
         
         return cell
     
+    }
+    
+}
+
+extension ListaMoedasViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = DetalhesViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }

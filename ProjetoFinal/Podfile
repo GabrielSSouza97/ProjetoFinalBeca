@@ -10,7 +10,10 @@ target 'ProjetoFinal' do
   pod 'CommonsService',
   :git => 'https://github.com/leticiassiqueira25/Commons.git',
   :branch => ‘master'
-
+  pod 'DetalhesMoeda',
+  :git => 'https://github.com/letyciamarques/DetalhesMoeda.git',
+  :branch => ‘develop'
+  
   target 'ProjetoFinalTests' do
     inherit! :search_paths
     # Pods for testing

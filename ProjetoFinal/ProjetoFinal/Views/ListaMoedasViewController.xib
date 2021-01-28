@@ -25,9 +25,9 @@
                     <rect key="frame" x="0.0" y="198" width="414" height="664"/>
                     <color key="backgroundColor" red="0.10196078431372549" green="0.098039215686274508" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </tableView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="EeR-xM-UCC">
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="EeR-xM-UCC">
                     <rect key="frame" x="197" y="438" width="20" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="color" red="0.52310655370000003" green="0.50755080109999995" blue="0.85671606030000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </activityIndicatorView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONF-h1-NWF">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
@@ -84,7 +84,9 @@
             <color key="backgroundColor" red="0.10196078431372549" green="0.098039215686274508" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="ONF-h1-NWF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="962-YI-9uT"/>
+                <constraint firstItem="EeR-xM-UCC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="9cV-X7-bQU"/>
                 <constraint firstItem="ONF-h1-NWF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DQC-dt-81e"/>
+                <constraint firstItem="EeR-xM-UCC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JNL-wy-ELZ"/>
                 <constraint firstItem="oZM-Pm-kdI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Mek-9Z-E5v"/>
                 <constraint firstItem="oZM-Pm-kdI" firstAttribute="top" secondItem="ONF-h1-NWF" secondAttribute="bottom" constant="8" id="ORv-Ci-ZMn"/>
                 <constraint firstItem="oZM-Pm-kdI" firstAttribute="top" secondItem="ONF-h1-NWF" secondAttribute="bottom" constant="8" id="XKz-9e-It7"/>
