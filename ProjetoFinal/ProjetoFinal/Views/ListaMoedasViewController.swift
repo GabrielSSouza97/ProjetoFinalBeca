@@ -111,7 +111,9 @@ extension ListaMoedasViewController: UITableViewDataSource {
 extension ListaMoedasViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = DetalhesViewController()
+        let moedaSelecionada = moedas[indexPath.row]
+        
+        let controller = DetalhesViewController(moedaDetalhe: moedaSelecionada)
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
