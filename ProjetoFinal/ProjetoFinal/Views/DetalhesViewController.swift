@@ -24,7 +24,9 @@ public class DetalhesViewController: UIViewController {
     // MARK : @IBAction
     
     @IBAction func voltar(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        //self.dismiss(animated: true, completion: nil)
+        //self.navigationController?.pushViewController(controller, animated: true)
+        //self.navigationController?.popViewController(animated: true)
     }
     
     var moedaDetalhe: Moeda
@@ -44,6 +46,7 @@ public class DetalhesViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         configuraValores()
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     public func configuraValores() {

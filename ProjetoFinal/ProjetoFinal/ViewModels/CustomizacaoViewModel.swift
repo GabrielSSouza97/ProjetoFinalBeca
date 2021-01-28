@@ -30,6 +30,9 @@ class CustomizacaoViewModel {
     
     func getData(){
         showLoading?()
+        MoedaDAO.shared.getMoedas { (<#[Moeda]#>) in
+            <#code#>
+        }
         moedaService.getDataFromServer { (success, moeda) in
             self.hideLoading?()
             if success {

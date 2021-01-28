@@ -9,10 +9,10 @@ target 'ProjetoFinal' do
   pod 'AlamofireImage', '~> 4.1.0'
   pod 'CommonsService',
   :git => 'https://github.com/leticiassiqueira25/Commons.git',
-  :branch => ‘master'
-  pod 'DetalhesMoeda',
+  :branch => 'master'
+  pod 'DetalhesMoedas',
   :git => 'https://github.com/letyciamarques/DetalhesMoeda.git',
-  :branch => ‘develop'
+  :branch => 'develop'
   
   target 'ProjetoFinalTests' do
     inherit! :search_paths

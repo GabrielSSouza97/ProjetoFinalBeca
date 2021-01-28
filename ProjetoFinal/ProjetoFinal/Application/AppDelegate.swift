@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        MoedaDAO.shared
         let viewController = ListaMoedasViewController()
         //UITabBar será a rootViewController + 2 navigation controller
         let navigationController = UINavigationController(rootViewController: viewController)

@@ -39,6 +39,7 @@ class ListaMoedasViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //View wiilappear - qnd entrar na detalhes seta como false
         self.navigationController?.setNavigationBarHidden(true, animated: false)
 
         tableView.dataSource = self
@@ -51,6 +52,11 @@ class ListaMoedasViewController: UIViewController {
         
         initViewModel()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
 // MARK: - Methods
@@ -113,8 +119,10 @@ extension ListaMoedasViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let moedaSelecionada = moedas[indexPath.row]
         
+        tableView.deselectRow(at: indexPath, animated: true)
         let controller = DetalhesViewController(moedaDetalhe: moedaSelecionada)
         self.navigationController?.pushViewController(controller, animated: true)
+        
     }
     
 }
