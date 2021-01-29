@@ -37,7 +37,7 @@
                         <color key="textColor" red="0.68235294120000001" green="0.67843137249999996" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p5E-fe-OGP">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icone" translatesAutoresizingMaskIntoConstraints="NO" id="p5E-fe-OGP">
                         <rect key="frame" x="10" y="10" width="50" height="51"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="4h3-oK-6YY"/>
@@ -89,4 +89,7 @@
             <point key="canvasLocation" x="57.971014492753625" y="102.79017857142857"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="icone" width="50" height="50"/>
+    </resources>
 </document>
