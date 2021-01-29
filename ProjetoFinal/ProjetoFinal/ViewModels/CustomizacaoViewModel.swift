@@ -1,13 +1,14 @@
 //
-//  DataViewModel.swift
+//  CustomizacaoViewModel.swift
 //  ProjetoFinal
 //
-//  Created by Leticia Sousa Siqueira on 22/01/21.
+//  Created by Leticia Sousa Siqueira on 27/01/21.
 //
 
 import UIKit
+import CommonsService
 
-class DataViewModel {
+class CustomizacaoViewModel {
     
     var moedas: [Moeda] = [Moeda]()
     var reloadTableView: (()->())?
@@ -15,6 +16,11 @@ class DataViewModel {
     var showLoading: (()->())?
     var hideLoading: (()->())?
     
+    let moedaService: MoedaService
+    
+    init(moedaService: MoedaService = MoedaService()) {
+        self.moedaService = moedaService
+    }
     
     private var cellViewModels: [DataListCellViewModel] = [DataListCellViewModel]() {
         didSet {
@@ -24,15 +30,24 @@ class DataViewModel {
     
     func getData(){
         showLoading?()
-        MoedaService().getDataFromServer { (success, moeda) in
+        MoedaDAO.shared.getMoedas { (success, moeda) in
             self.hideLoading?()
             if success {
-                self.createCell(moedas: moeda!)
+                self.createCell(moedas: moeda)
                 self.reloadTableView?()
             } else {
                 self.showError?()
             }
         }
+//        moedaService.getDataFromServer { (success, moeda) in
+//            self.hideLoading?()
+//            if success {
+//                self.createCell(moedas: moeda!)
+//                self.reloadTableView?()
+//            } else {
+//                self.showError?()
+//            }
+//        }
     }
     
     var numberOfCells: Int {
@@ -47,14 +62,17 @@ class DataViewModel {
         self.moedas = moedas
         var vms = [DataListCellViewModel]()
         for data in moedas {
-            vms.append(DataListCellViewModel(titleText: data.name!, subTitleText: data.siglaMoeda!))
+            vms.append(DataListCellViewModel(nomeText: data.name ?? "", siglaText: data.siglaMoeda, cotacaoText: data.priceUSD ?? 0, imagemURL: data.idIcon ?? ""))
         }
         cellViewModels = vms
     }
+
 }
 
 struct DataListCellViewModel {
-    let titleText: String
-    let subTitleText: String
+    let nomeText: String
+    let siglaText: String
+    let cotacaoText: Double
+    let imagemURL: String
 }
 
