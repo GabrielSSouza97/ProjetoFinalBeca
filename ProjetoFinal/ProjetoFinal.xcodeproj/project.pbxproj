@@ -10,8 +10,8 @@
 		309F345C90162811F6CAF4A2 /* Pods_ProjetoFinal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F82940AB6A1511C0D08C33F /* Pods_ProjetoFinal.framework */; };
 		C6DA1E614CB880FBB0277C76 /* Pods_ProjetoFinal_ProjetoFinalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA602712E3AD5E9B2EEB01E /* Pods_ProjetoFinal_ProjetoFinalUITests.framework */; };
 		D40B1235830CBC81E0EC47AC /* Pods_ProjetoFinalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E090AC894DB799559FA527 /* Pods_ProjetoFinalTests.framework */; };
-		FC15B3E525C341C500C137CE /* DetalhesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC15B3E425C341C400C137CE /* DetalhesViewController.xib */; };
 		FC15B3EA25C34E8000C137CE /* MoedaDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC15B3E925C34E8000C137CE /* MoedaDAO.swift */; };
+		FC15B4B425C447E700C137CE /* DashboardTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC15B4B325C447E700C137CE /* DashboardTabBarController.swift */; };
 		FC2D382125BB04B0005D2399 /* MoedaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D382025BB04B0005D2399 /* MoedaService.swift */; };
 		FC2D382A25BB0838005D2399 /* ListaMoedasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D382825BB0838005D2399 /* ListaMoedasViewController.swift */; };
 		FC2D382B25BB0838005D2399 /* ListaMoedasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2D382925BB0838005D2399 /* ListaMoedasViewController.xib */; };
@@ -25,7 +25,6 @@
 		FC3EACAE25B9CB9200643728 /* ProjetoFinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3EACAD25B9CB9200643728 /* ProjetoFinalTests.swift */; };
 		FC3EACB925B9CB9200643728 /* ProjetoFinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3EACB825B9CB9200643728 /* ProjetoFinalUITests.swift */; };
 		FC46B65025C1E34000C1FBD7 /* CustomizacaoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46B64F25C1E34000C1FBD7 /* CustomizacaoViewModel.swift */; };
-		FC46B68D25C2F68900C1FBD7 /* DetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46B68B25C2F68900C1FBD7 /* DetalhesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +54,8 @@
 		BB7386C4375C870C5B913CF8 /* Pods-ProjetoFinal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoFinal.debug.xcconfig"; path = "Target Support Files/Pods-ProjetoFinal/Pods-ProjetoFinal.debug.xcconfig"; sourceTree = "<group>"; };
 		D0E6ADE67E2C0D499B7AA418 /* Pods-ProjetoFinalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoFinalTests.debug.xcconfig"; path = "Target Support Files/Pods-ProjetoFinalTests/Pods-ProjetoFinalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF356160C98C5DA062317916 /* Pods-ProjetoFinal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoFinal.release.xcconfig"; path = "Target Support Files/Pods-ProjetoFinal/Pods-ProjetoFinal.release.xcconfig"; sourceTree = "<group>"; };
-		FC15B3E425C341C400C137CE /* DetalhesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetalhesViewController.xib; sourceTree = "<group>"; };
 		FC15B3E925C34E8000C137CE /* MoedaDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaDAO.swift; sourceTree = "<group>"; };
+		FC15B4B325C447E700C137CE /* DashboardTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabBarController.swift; sourceTree = "<group>"; };
 		FC2D382025BB04B0005D2399 /* MoedaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaService.swift; sourceTree = "<group>"; };
 		FC2D382825BB0838005D2399 /* ListaMoedasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaMoedasViewController.swift; sourceTree = "<group>"; };
 		FC2D382925BB0838005D2399 /* ListaMoedasViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaMoedasViewController.xib; sourceTree = "<group>"; };
@@ -76,7 +75,6 @@
 		FC3EACB825B9CB9200643728 /* ProjetoFinalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetoFinalUITests.swift; sourceTree = "<group>"; };
 		FC3EACBA25B9CB9200643728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC46B64F25C1E34000C1FBD7 /* CustomizacaoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizacaoViewModel.swift; sourceTree = "<group>"; };
-		FC46B68B25C2F68900C1FBD7 /* DetalhesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,13 +139,6 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		FC2D380E25BB013D005D2399 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		FC2D380F25BB0142005D2399 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,8 +163,7 @@
 				FC2D382925BB0838005D2399 /* ListaMoedasViewController.xib */,
 				FC2D382F25BB090A005D2399 /* CustomizacaoTableViewCell.swift */,
 				FC2D383025BB090A005D2399 /* CustomizacaoTableViewCell.xib */,
-				FC46B68B25C2F68900C1FBD7 /* DetalhesViewController.swift */,
-				FC15B3E425C341C400C137CE /* DetalhesViewController.xib */,
+				FC15B4B325C447E700C137CE /* DashboardTabBarController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,7 +204,6 @@
 				FC2D380125BB00DA005D2399 /* Application */,
 				FC2D381125BB0154005D2399 /* Views */,
 				FC2D380F25BB0142005D2399 /* ViewModels */,
-				FC2D380E25BB013D005D2399 /* Models */,
 				FC2D381025BB0148005D2399 /* Service */,
 				FC2D381225BB01A6005D2399 /* Extension */,
 				FC3EAC9F25B9CB9100643728 /* Assets.xcassets */,
@@ -350,7 +339,6 @@
 			files = (
 				FC2D382B25BB0838005D2399 /* ListaMoedasViewController.xib in Resources */,
 				FC3EACA325B9CB9100643728 /* LaunchScreen.storyboard in Resources */,
-				FC15B3E525C341C500C137CE /* DetalhesViewController.xib in Resources */,
 				FC3EACA025B9CB9100643728 /* Assets.xcassets in Resources */,
 				FC2D383225BB090A005D2399 /* CustomizacaoTableViewCell.xib in Resources */,
 			);
@@ -480,7 +468,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC46B68D25C2F68900C1FBD7 /* DetalhesViewController.swift in Sources */,
 				FC15B3EA25C34E8000C137CE /* MoedaDAO.swift in Sources */,
 				FC2D382125BB04B0005D2399 /* MoedaService.swift in Sources */,
 				FC2D382A25BB0838005D2399 /* ListaMoedasViewController.swift in Sources */,
@@ -488,6 +475,7 @@
 				FC46B65025C1E34000C1FBD7 /* CustomizacaoViewModel.swift in Sources */,
 				FC2D383C25BB0C3E005D2399 /* ExtensionsListaMoedasViewController.swift in Sources */,
 				FC3EAC9925B9CB8B00643728 /* SceneDelegate.swift in Sources */,
+				FC15B4B425C447E700C137CE /* DashboardTabBarController.swift in Sources */,
 				FC2D383125BB090A005D2399 /* CustomizacaoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

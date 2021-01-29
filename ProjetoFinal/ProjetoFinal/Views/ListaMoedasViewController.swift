@@ -8,6 +8,7 @@
 import UIKit
 import AlamofireImage
 import CommonsService
+import DetalhesMoedas
 
 class ListaMoedasViewController: UIViewController {
     

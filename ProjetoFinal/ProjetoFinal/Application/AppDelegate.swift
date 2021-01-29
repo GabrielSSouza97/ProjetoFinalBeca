@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DetalhesMoedas
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,12 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         MoedaDAO.shared
-        let viewController = ListaMoedasViewController()
-        //UITabBar será a rootViewController + 2 navigation controller
-        let navigationController = UINavigationController(rootViewController: viewController)
-        self.window?.rootViewController = navigationController
-        self.window?.makeKeyAndVisible()
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UINavigationController(rootViewController: DashboardTabBarController())
+        window?.makeKeyAndVisible()
         
         return true
     }

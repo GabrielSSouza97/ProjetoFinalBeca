@@ -12,7 +12,7 @@ target 'ProjetoFinal' do
   :branch => 'master'
   pod 'DetalhesMoedas',
   :git => 'https://github.com/letyciamarques/DetalhesMoeda.git',
-  :branch => 'develop'
+  :branch => 'feature/letycia'
   
   target 'ProjetoFinalTests' do
     inherit! :search_paths

@@ -30,18 +30,24 @@ class CustomizacaoViewModel {
     
     func getData(){
         showLoading?()
-        MoedaDAO.shared.getMoedas { (<#[Moeda]#>) in
-            <#code#>
-        }
-        moedaService.getDataFromServer { (success, moeda) in
+        MoedaDAO.shared.getMoedas { (success, moeda) in
             self.hideLoading?()
             if success {
-                self.createCell(moedas: moeda!)
+                self.createCell(moedas: moeda)
                 self.reloadTableView?()
             } else {
                 self.showError?()
             }
         }
+//        moedaService.getDataFromServer { (success, moeda) in
+//            self.hideLoading?()
+//            if success {
+//                self.createCell(moedas: moeda!)
+//                self.reloadTableView?()
+//            } else {
+//                self.showError?()
+//            }
+//        }
     }
     
     var numberOfCells: Int {

@@ -20,17 +20,17 @@ class MoedaDAO {
         self.moedaService = moedaService
     }
     
-    func getMoedas(completion: @escaping (_ moeda: [Moeda])->() ) {
+    func getMoedas(completion: @escaping (_ success: Bool, _ moeda: [Moeda])->() ) {
         if moedas.count > 0 {
-            completion(moedas)
+            completion(true, moedas)
         } else {
             moedaService.getDataFromServer { (sucess, moedasResponse) in
                 switch sucess {
                 case true:
                     self.moedas = moedasResponse != nil ? moedasResponse! : []
-                    completion(self.moedas)
+                    completion(true, self.moedas)
                 case false:
-                    completion(self.moedas)
+                    completion(false, self.moedas)
                 }
             }
         }
