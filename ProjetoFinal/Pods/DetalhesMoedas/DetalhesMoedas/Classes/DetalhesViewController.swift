@@ -25,11 +25,24 @@ public class DetalhesViewController: UIViewController {
     @IBOutlet weak var valorUltimoMes: UILabel!
     @IBOutlet weak var labelBotao: UILabel!
     @IBOutlet weak var imagemFavorito: UIImageView!
-    
+
     // MARK : @IBAction
     
     @IBAction func removeAdiciona(_ sender: UIButton) {
-        labelBotao.text = "ADICIONAR"
+        if moedaDetalhe.isFavorite == false {
+            guard moedaDetalhe.siglaMoeda != nil else { return }
+            let sigla = moedaDetalhe.siglaMoeda
+            
+            //Chama UserDefaults
+            let defaults = UserDefaults.standard
+            //Recupera Array
+            var fav = defaults.array(forKey: "ArrayFavoritos")
+            //Salva nova sigla no UserDefaults Array
+            fav?.append(sigla)
+            defaults.set(fav, forKey: "ArrayFavoritos")
+        } else {
+            
+        }
     }
     
     public init(moedaDetalhe: Moeda, formataNumero: FormataNumero = FormataNumero()) {
@@ -46,7 +59,7 @@ public class DetalhesViewController: UIViewController {
             super.viewDidLoad()
             configuraValores()
             self.navigationController?.setNavigationBarHidden(false, animated: false)
-        }
+    }
     
     public func configuraValores() {
             siglaMoeda.text = moedaDetalhe.siglaMoeda
@@ -59,6 +72,13 @@ public class DetalhesViewController: UIViewController {
             let newUrl = url.replacingOccurrences(of: "-", with: "")
             guard let imageUrl = URL(string: "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/\(newUrl).png") else { return }
             imagemMoeda.af_setImage(withURL: imageUrl)
+        
+            if moedaDetalhe.isFavorite == false {
+                labelBotao.text = "ADICIONAR"
+            } else {
+                labelBotao.text = "REMOVER"
+            }
         }
     }
+
 

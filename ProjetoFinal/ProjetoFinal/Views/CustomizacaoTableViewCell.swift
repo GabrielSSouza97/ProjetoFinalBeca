@@ -15,7 +15,6 @@ class CustomizacaoTableViewCell: UITableViewCell {
     @IBOutlet weak var cotacaoLabel: UILabel!
     @IBOutlet weak var imagemFavorito: UIImageView!
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
     }

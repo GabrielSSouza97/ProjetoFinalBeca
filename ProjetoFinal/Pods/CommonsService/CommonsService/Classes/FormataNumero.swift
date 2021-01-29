@@ -17,8 +17,8 @@ public class FormataNumero {
             let formatter = NumberFormatter()
             formatter.numberStyle = .decimal
             formatter.maximumFractionDigits = 2
-            formatter.decimalSeparator = "."
-            formatter.groupingSeparator = ","
+            formatter.decimalSeparator = ","
+            formatter.groupingSeparator = "."
             let number = NSNumber(value: cotacao)
             let formattedValue = formatter.string(from: number)!
         

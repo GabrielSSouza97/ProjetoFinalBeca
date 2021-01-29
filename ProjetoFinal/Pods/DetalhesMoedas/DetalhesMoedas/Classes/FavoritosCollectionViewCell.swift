@@ -13,6 +13,7 @@ class FavoritosCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelSiglaMoeda: UILabel!
     @IBOutlet weak var labelValorMoeda: UILabel!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         //print(Perfil.shared.nome)
