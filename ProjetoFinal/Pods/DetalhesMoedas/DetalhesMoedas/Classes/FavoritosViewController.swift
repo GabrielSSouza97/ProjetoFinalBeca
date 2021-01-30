@@ -42,16 +42,21 @@ public class FavoritosViewController: UIViewController {
 }
 
 extension FavoritosViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+    // commit
 
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 8
     }
     
-    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.width/2 - 20, height: collectionView.bounds.height/4)
+    }
 
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let celula = collectionView.dequeueReusableCell(withReuseIdentifier: celulaFavorito, for: indexPath) as! FavoritosCollectionViewCell
+        
+        celula.layer.cornerRadius = 7
+        celula.layer.borderWidth = 0.5
         celula.labelNomeMoeda.text = "Nome da Moeda"
         celula.labelSiglaMoeda.text = "SGL"
         celula.labelValorMoeda.text = "R$"

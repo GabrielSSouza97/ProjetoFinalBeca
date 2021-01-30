@@ -16,6 +16,7 @@ public struct Moeda : Decodable {
     public var volumeDia: Double?
     public var volumeMes: Double?
     public var idIcon: String?
+    public var isFavorite: Bool = false
     
     public init(siglaMoeda: String, name: String?, priceUSD: Double?, volumeHora: Double?, volumeDia: Double?, volumeMes: Double?, idIcon: String?) {
         self.siglaMoeda = siglaMoeda

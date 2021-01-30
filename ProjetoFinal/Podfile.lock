@@ -2,7 +2,7 @@ PODS:
   - Alamofire (5.4.1)
   - AlamofireImage (4.1.0):
     - Alamofire (~> 5.1)
-  - CommonsService (1.3.1)
+  - CommonsService (1.4.1)
   - DetalhesMoedas (1.0.0):
     - AlamofireImage
     - CommonsService
@@ -28,16 +28,16 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CommonsService:
-    :commit: f449848b9beeb20621a767e0d6fdf73d8a99959a
+    :commit: 2f2a86287c2a321c19e54a722d9b58f793373775
     :git: https://github.com/leticiassiqueira25/Commons.git
   DetalhesMoedas:
-    :commit: 024955c31848672112dd6089d8a0de0e3191bb9c
+    :commit: cad9ca7313df04be52786618f5de0df83dea6070
     :git: https://github.com/letyciamarques/DetalhesMoeda.git
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
-  CommonsService: ea1b6a91b995137b2d52f5361917c44846a0d393
+  CommonsService: f01c3e039222ea9665581397871c671294072135
   DetalhesMoedas: dd80b755136a83bff2d4abf2de7d45b433c2cce5
 
 PODFILE CHECKSUM: 7ff2e61bd7790638e2cc3622d411b2ab596658f1
