@@ -20,6 +20,8 @@
                 <outlet property="valorUltimoDia" destination="ryG-sA-4i7" id="i4n-ao-Ffq"/>
                 <outlet property="valorUltimoMes" destination="iFm-2D-wpT" id="cWF-pc-c7i"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewDois" destination="M2g-kw-vTt" id="wa2-e0-Uc1"/>
+                <outlet property="viewUm" destination="gsm-Va-bkD" id="uVI-Zu-d6v"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

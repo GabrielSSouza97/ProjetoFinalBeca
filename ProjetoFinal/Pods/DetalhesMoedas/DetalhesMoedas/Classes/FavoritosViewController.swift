@@ -28,7 +28,7 @@ public class FavoritosViewController: UIViewController {
         collectionViewFavoritos.reloadData()
         //Perfil.shared
         //print(Perfil.shared.nome)
-        //erfil.shared.nome = "Marcio"
+        //erfil.shared.nome = "Marcio"        
     }
     
     func setupCollectionView() {

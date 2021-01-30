@@ -26,6 +26,51 @@ public class DetalhesViewController: UIViewController {
     @IBOutlet weak var labelBotao: UILabel!
     @IBOutlet weak var imagemFavorito: UIImageView!
     
+// @IBOutlet weak var viewUm: UIView!
+    
+// @IBOutlet weak var viewDois: UIView!
+    
+    // MARK: Acessibility
+    
+    func setupAccessibility() {
+       // viewUm.isAccessibilityElement = true
+       // viewUm.accessibilityLabel = "Nesse espaço contém o valor da moeda selecionada, o botão adicionar ou remover aos favoritos"
+        
+        //sigla
+        siglaMoeda.isAccessibilityElement = true
+        siglaMoeda.accessibilityTraits = .header
+        siglaMoeda.accessibilityLabel = "Sigla da moeda"
+        
+        //imagem
+        imagemMoeda.isAccessibilityElement = true
+        imagemMoeda.accessibilityTraits = .image
+        imagemMoeda.accessibilityLabel = "Imagem que representa a moeda selecionada"
+        
+        // botao adiciona/remove
+        labelBotao.isAccessibilityElement = true
+        labelBotao.accessibilityLabel = "Adicione ou Remova aos favoritos"
+        labelBotao.accessibilityTraits = .button
+        
+        
+        //viewDois.isAccessibilityElement = true
+       // viewDois.accessibilityLabel = "Nesse espaço contém os volumes negociados, sendo os valores da última hora, do último dia e do último mês"
+        
+//        valorUltimaHora.isAccessibilityElement = true
+//
+//        valorUltimaHora.accessibilityLabel = "valor da última hora"
+//
+//        valorUltimoDia.isAccessibilityElement = true
+//        //valorUltimoDia.accessibilityTraits = .
+//        valorUltimoDia.accessibilityLabel = "valor do último dia"
+//
+//        valorUltimoMes.isAccessibilityElement = true
+//        //valorUltimoMes.accessibilityTraits = .
+//        valorUltimoMes.accessibilityLabel = "valor do último mês"
+    
+       //self.accessibilityElements = [viewUm,siglaMoeda, imagemMoeda,valorPrincipal, labelBotao, viewDois ]
+    }
+        
+    
     // MARK : @IBAction
     
     @IBAction func removeAdiciona(_ sender: UIButton) {
@@ -58,7 +103,9 @@ public class DetalhesViewController: UIViewController {
             super.viewDidLoad()
             configuraValores()
             self.navigationController?.setNavigationBarHidden(false, animated: false)
-        }
+            setupAccessibility()
+        
+    }
     
     public func configuraValores() {
             siglaMoeda.text = moedaDetalhe.siglaMoeda
