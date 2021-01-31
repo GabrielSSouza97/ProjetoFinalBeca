@@ -43,6 +43,7 @@ class ListaMoedasViewController: UIViewController {
         tableView?.delegate = self
         dataLabel?.text = Date().dateString()
         initViewModel()
+        self.tableView?.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
