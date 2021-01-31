@@ -9,6 +9,7 @@ import UIKit
 import CommonsService
 
 class CustomizacaoViewModel {
+    
     var moedas: [Moeda] = [Moeda]()
     var reloadTableView: (() -> Void)?
     var showError: (() -> Void)?
@@ -25,7 +26,7 @@ class CustomizacaoViewModel {
             self.reloadTableView?()
         }
     }
-    
+
     func getData() {
         showLoading?()
         MoedaDAO.shared.getMoedas { (success, moeda) in
