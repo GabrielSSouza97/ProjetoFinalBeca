@@ -6,24 +6,28 @@ PODS:
   - DetalhesMoedas (1.0.0):
     - AlamofireImage
     - CommonsService
+    - SwiftLint
+  - SwiftLint (0.42.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.4.1)
   - AlamofireImage (~> 4.1.0)
   - CommonsService (from `https://github.com/leticiassiqueira25/Commons.git`, branch `master`)
-  - DetalhesMoedas (from `https://github.com/letyciamarques/DetalhesMoeda.git`, branch `teste/leticia`)
+  - DetalhesMoedas (from `https://github.com/letyciamarques/DetalhesMoeda.git`, branch `develop`)
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
+    - SwiftLint
 
 EXTERNAL SOURCES:
   CommonsService:
     :branch: master
     :git: https://github.com/leticiassiqueira25/Commons.git
   DetalhesMoedas:
-    :branch: teste/leticia
+    :branch: develop
     :git: https://github.com/letyciamarques/DetalhesMoeda.git
 
 CHECKOUT OPTIONS:
@@ -31,15 +35,16 @@ CHECKOUT OPTIONS:
     :commit: 2f2a86287c2a321c19e54a722d9b58f793373775
     :git: https://github.com/leticiassiqueira25/Commons.git
   DetalhesMoedas:
-    :commit: 8be39d0d512c0da58a1f9860ba61c19fa96b757a
+    :commit: c5dc1818c2e208ce9f52d3e0bd1da0347b2b6744
     :git: https://github.com/letyciamarques/DetalhesMoeda.git
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   CommonsService: f01c3e039222ea9665581397871c671294072135
-  DetalhesMoedas: dd80b755136a83bff2d4abf2de7d45b433c2cce5
+  DetalhesMoedas: 8a990c3eb57f62a7b37984ce2bc767173dcc746d
+  SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
 
-PODFILE CHECKSUM: c5f6201d49b383dae54737740cdd71666403c963
+PODFILE CHECKSUM: 67d20e84d795fc49ecc4e95bf859d6613baba700
 
 COCOAPODS: 1.10.1

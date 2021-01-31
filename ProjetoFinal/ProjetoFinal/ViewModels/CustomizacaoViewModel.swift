@@ -9,13 +9,11 @@ import UIKit
 import CommonsService
 
 class CustomizacaoViewModel {
-    
     var moedas: [Moeda] = [Moeda]()
-    var reloadTableView: (()->())?
-    var showError: (()->())?
-    var showLoading: (()->())?
-    var hideLoading: (()->())?
-    
+    var reloadTableView: (() -> Void)?
+    var showError: (() -> Void)?
+    var showLoading: (() -> Void)?
+    var hideLoading: (() -> Void)?
     let moedaService: MoedaService
     
     init(moedaService: MoedaService = MoedaService()) {
@@ -28,7 +26,7 @@ class CustomizacaoViewModel {
         }
     }
     
-    func getData(){
+    func getData() {
         showLoading?()
         MoedaDAO.shared.getMoedas { (success, moeda) in
             self.hideLoading?()
@@ -49,7 +47,7 @@ class CustomizacaoViewModel {
         return cellViewModels[indexPath.row]
     }
     
-    func createCell(moedas: [Moeda]){
+    func createCell(moedas: [Moeda]) {
         self.moedas = moedas
         var vms = [DataListCellViewModel]()
         for data in moedas {
@@ -57,7 +55,6 @@ class CustomizacaoViewModel {
         }
         cellViewModels = vms
     }
-
 }
 
 struct DataListCellViewModel {
@@ -66,4 +63,3 @@ struct DataListCellViewModel {
     let cotacaoText: Double
     let imagemURL: String
 }
-

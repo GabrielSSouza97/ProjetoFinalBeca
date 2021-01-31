@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		309F345C90162811F6CAF4A2 /* Pods_ProjetoFinal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F82940AB6A1511C0D08C33F /* Pods_ProjetoFinal.framework */; };
+		449BE36325C602BD00298ED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3EACA125B9CB9100643728 /* LaunchScreen.storyboard */; };
 		C6DA1E614CB880FBB0277C76 /* Pods_ProjetoFinal_ProjetoFinalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA602712E3AD5E9B2EEB01E /* Pods_ProjetoFinal_ProjetoFinalUITests.framework */; };
 		D40B1235830CBC81E0EC47AC /* Pods_ProjetoFinalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E090AC894DB799559FA527 /* Pods_ProjetoFinalTests.framework */; };
 		FC15B3EA25C34E8000C137CE /* MoedaDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC15B3E925C34E8000C137CE /* MoedaDAO.swift */; };
@@ -20,7 +21,6 @@
 		FC3EAC9725B9CB8B00643728 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3EAC9625B9CB8B00643728 /* AppDelegate.swift */; };
 		FC3EAC9925B9CB8B00643728 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3EAC9825B9CB8B00643728 /* SceneDelegate.swift */; };
 		FC3EACA025B9CB9100643728 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3EAC9F25B9CB9100643728 /* Assets.xcassets */; };
-		FC3EACA325B9CB9100643728 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3EACA125B9CB9100643728 /* LaunchScreen.storyboard */; };
 		FC3EACAE25B9CB9200643728 /* ProjetoFinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3EACAD25B9CB9200643728 /* ProjetoFinalTests.swift */; };
 		FC3EACB925B9CB9200643728 /* ProjetoFinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3EACB825B9CB9200643728 /* ProjetoFinalUITests.swift */; };
 		FC46B65025C1E34000C1FBD7 /* CustomizacaoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46B64F25C1E34000C1FBD7 /* CustomizacaoViewModel.swift */; };
@@ -230,6 +230,7 @@
 				FC3EAC9025B9CB8B00643728 /* Frameworks */,
 				FC3EAC9125B9CB8B00643728 /* Resources */,
 				19BF40BA3EDD795036F1A199 /* [CP] Embed Pods Frameworks */,
+				FCF38B8A25C7311F0006489A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -327,7 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC2D382B25BB0838005D2399 /* ListaMoedasViewController.xib in Resources */,
-				FC3EACA325B9CB9100643728 /* LaunchScreen.storyboard in Resources */,
+				449BE36325C602BD00298ED6 /* LaunchScreen.storyboard in Resources */,
 				FC3EACA025B9CB9100643728 /* Assets.xcassets in Resources */,
 				FC2D383225BB090A005D2399 /* CustomizacaoTableViewCell.xib in Resources */,
 			);
@@ -449,6 +450,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		FCF38B8A25C7311F0006489A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: Swiftlint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
