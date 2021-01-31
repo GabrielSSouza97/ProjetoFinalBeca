@@ -104,6 +104,10 @@ extension ListaMoedasViewController: UITableViewDataSource {
             fatalError("A célula não existe!")
         }
         
+//        guard let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "customTableViewCell") as? CustomizacaoTableViewCell else {
+//            fatalError("A célula não existe!")
+//        }
+        
         let cellVM = customViewModel.getCellViewModel( at: indexPath )
         moedas = customViewModel.moedas
         cell.siglaLabel.text = cellVM.siglaText
@@ -114,20 +118,15 @@ extension ListaMoedasViewController: UITableViewDataSource {
         let defaults = UserDefaults.standard
         //tenta recuperar a lista, se não existir item, monta um array vazio
         var listaFavoritos = defaults.object(forKey:"ListaFavoritos") as? [String] ?? [String]()
-        //só guardei a sigla da moeda aqui
-//        var moedaAtual = moedas[indexPath.row].siglaMoeda
-//        print(moedaAtual)
-        print(cellVM.siglaText)
+
         //tem a sigla na lista? se sim, remove da lista
         if(listaFavoritos.contains(cellVM.siglaText)) {
-            cell.imagemFavorito.image = UIImage(named: "favoritos.png")
-            print("ENTROU")
+            cell.imagemFavorito.image = UIImage(named: "icon_favorite.png")
+            customViewModel.moedas[indexPath.row].isFavorite = true
         } else {
-            //não faz nada
-            
+            cell.imagemFavorito.image = UIImage(named: "")
+            customViewModel.moedas[indexPath.row].isFavorite = false
         }
-        
-        
         
         let url = cellVM.imagemURL
         let newUrl = url.replacingOccurrences(of: "-", with: "")
@@ -143,7 +142,7 @@ extension ListaMoedasViewController: UITableViewDataSource {
 extension ListaMoedasViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let moedaSelecionada = moedas[indexPath.row]
+        let moedaSelecionada = customViewModel.moedas[indexPath.row]
         
         tableView.deselectRow(at: indexPath, animated: true)
         let controller = DetalhesViewController(moedaDetalhe: moedaSelecionada)
