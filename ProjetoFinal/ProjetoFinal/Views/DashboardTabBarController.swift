@@ -37,12 +37,7 @@ class DashboardTabBarController: UITabBarController, UITabBarControllerDelegate 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-            //firstViewController = ListaMoedasViewController()
-        
             firstViewController.tabBarItem = UITabBarItem(title: "Moedas", image: UIImage(named: "moedas.png"), tag: 1)
-        
-            //let secondViewController = FavoritosViewController(moedaFavorito: firstViewController.moedas)
-            
             secondViewController.tabBarItem = UITabBarItem(title: "Favoritos", image: UIImage(named: "favoritos.png"), tag: 1)
             let tabBarList = [firstViewController, secondViewController]
             self.tabBar.tintColor = UIColor.orange
@@ -52,18 +47,13 @@ class DashboardTabBarController: UITabBarController, UITabBarControllerDelegate 
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        if(item.title == "Favoritos"){
-            //inicia defaults
+        if(item.title == "Favoritos") {
             let defaults = UserDefaults.standard
-            //lista de favoritos
             let listaFavoritos = defaults.object(forKey:"ListaFavoritos") as? [String] ?? [String]()
-            //crio uma lista vazio para os favoritos
             var moedas = [Moeda]()
-            
             guard let moedasFavoritos = firstViewController.moedas as? Array<Moeda> else { return }
-            
-            //se houver algum item da lista
-            if(listaFavoritos.count > 0) {
+            let contador = 0
+            if(listaFavoritos.count > contador) {
                 for item in moedasFavoritos {
                     for itemFavorito in listaFavoritos {
                         if(item.siglaMoeda == itemFavorito) {
@@ -72,11 +62,9 @@ class DashboardTabBarController: UITabBarController, UITabBarControllerDelegate 
                     }
                 }
             }
-            
             secondViewController.moedaFavorito = moedas
-            
         } else {
-
+            //
         }
     }
 }

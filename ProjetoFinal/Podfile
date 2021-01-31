@@ -7,6 +7,7 @@ target 'ProjetoFinal' do
 
   pod 'Alamofire', '~> 5.4.1'
   pod 'AlamofireImage', '~> 4.1.0'
+  pod 'SwiftLint'
   pod 'CommonsService',
   :git => 'https://github.com/leticiassiqueira25/Commons.git',
   :branch => 'master'
