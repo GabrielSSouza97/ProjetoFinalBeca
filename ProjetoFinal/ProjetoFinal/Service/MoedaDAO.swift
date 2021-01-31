@@ -10,6 +10,8 @@ import CommonsService
 
 class MoedaDAO {
     
+    // MARK: - Attributes
+    
     static let shared: MoedaDAO = MoedaDAO()
     private var moedas: [Moeda] = []
     private let moedaService: MoedaService
@@ -17,6 +19,8 @@ class MoedaDAO {
     init(moedaService: MoedaService = MoedaService()) {
         self.moedaService = moedaService
     }
+    
+    // MARK: - Methods
     
     func getMoedas(completion: @escaping (_ success: Bool, _ moeda: [Moeda]) -> Void) {
         let contador = 0

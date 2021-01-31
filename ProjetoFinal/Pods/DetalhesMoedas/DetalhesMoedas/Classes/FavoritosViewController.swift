@@ -10,9 +10,8 @@ import CommonsService
 
 public class FavoritosViewController: UIViewController {
     
-    //@IBOutlet weak var siglaMoeda: UILabel!
+  
     @IBOutlet weak var collectionViewFavoritos: UICollectionView?
-    
     
     @IBOutlet weak var labelData: UILabel?
     
@@ -38,8 +37,7 @@ public class FavoritosViewController: UIViewController {
         setupCollectionView()
         labelData?.text = Date().dateString()
         collectionViewFavoritos?.reloadData()
-        //Perfil.shared
-        //print(Perfil.shared.nome)
+
     }
     
     public override func viewWillAppear(_ animated: Bool) {
@@ -98,5 +96,4 @@ extension Date {
         return result
 
     }
-
 }
