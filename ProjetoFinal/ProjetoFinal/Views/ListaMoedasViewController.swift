@@ -26,8 +26,11 @@ class ListaMoedasViewController: UIViewController {
     
     init(customViewModel: CustomizacaoViewModel = CustomizacaoViewModel(), formataNumero: FormataNumero = FormataNumero()) {
         self.customViewModel = customViewModel
+        //self.customViewModel.getData()
+        self.moedas = customViewModel.moedas
         self.formataNumero = formataNumero
         super.init(nibName: "ListaMoedasViewController", bundle: nil)
+        
     }
     
     required init?(coder: NSCoder) {
@@ -40,13 +43,32 @@ class ListaMoedasViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         dataLabel.text = Date().dateString()
-        
         initViewModel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        print("Appear da lista principal")
+        atualizaFavorito()
+    }
+    
+    func atualizaFavorito() {
+        let defaults = UserDefaults.standard
+        //lista de favoritos
+        let listaFavoritos = defaults.object(forKey:"ListaFavoritos") as? [String] ?? [String]()
+        
+        if(listaFavoritos.count > 0) {
+            for var item in moedas {
+                for itemFavorito in listaFavoritos {
+                    if(item.siglaMoeda == itemFavorito) {
+                        item.isFavorite = true
+                    } else {
+                        item.isFavorite = false
+                    }
+                }
+            }
+        }
     }
 
 // MARK: - Methods
@@ -88,6 +110,23 @@ extension ListaMoedasViewController: UITableViewDataSource {
         cell.nomeLabel.text = cellVM.nomeText
         cell.cotacaoLabel.text = formataNumero.formatarCotacao(cotacao: cellVM.cotacaoText)
         
+        //Chama UserDefaults
+        let defaults = UserDefaults.standard
+        //tenta recuperar a lista, se não existir item, monta um array vazio
+        var listaFavoritos = defaults.object(forKey:"ListaFavoritos") as? [String] ?? [String]()
+        //só guardei a sigla da moeda aqui
+        var moedaAtual = moedas[indexPath.row].siglaMoeda
+        print(moedaAtual)
+        //tem a sigla na lista? se sim, remove da lista
+        if(listaFavoritos.contains(moedaAtual)) {
+            cell.imagemFavorito.image = UIImage(named: "favoritos.png")
+        } else {
+            //não faz nada
+            
+        }
+        
+        
+        
         let url = cellVM.imagemURL
         let newUrl = url.replacingOccurrences(of: "-", with: "")
         guard let imageUrl = URL(string: "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/\(newUrl).png") else { return UITableViewCell()}
@@ -107,7 +146,6 @@ extension ListaMoedasViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         let controller = DetalhesViewController(moedaDetalhe: moedaSelecionada)
         self.navigationController?.pushViewController(controller, animated: true)
-        
     }
     
 }
