@@ -51,13 +51,14 @@ class CustomizacaoViewModel {
     
     func createCell(moedas: [Moeda]){
         self.moedas = moedas
+        
         var vms = [DataListCellViewModel]()
         for data in moedas {
             vms.append(DataListCellViewModel(nomeText: data.name ?? "", siglaText: data.siglaMoeda, cotacaoText: data.priceUSD ?? 0, imagemURL: data.idIcon ?? ""))
         }
+        
         cellViewModels = vms
     }
-
 }
 
 struct DataListCellViewModel {

@@ -115,11 +115,13 @@ extension ListaMoedasViewController: UITableViewDataSource {
         //tenta recuperar a lista, se não existir item, monta um array vazio
         var listaFavoritos = defaults.object(forKey:"ListaFavoritos") as? [String] ?? [String]()
         //só guardei a sigla da moeda aqui
-        var moedaAtual = moedas[indexPath.row].siglaMoeda
-        print(moedaAtual)
+//        var moedaAtual = moedas[indexPath.row].siglaMoeda
+//        print(moedaAtual)
+        print(cellVM.siglaText)
         //tem a sigla na lista? se sim, remove da lista
-        if(listaFavoritos.contains(moedaAtual)) {
+        if(listaFavoritos.contains(cellVM.siglaText)) {
             cell.imagemFavorito.image = UIImage(named: "favoritos.png")
+            print("ENTROU")
         } else {
             //não faz nada
             

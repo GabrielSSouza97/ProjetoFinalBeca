@@ -11,7 +11,7 @@ DEPENDENCIES:
   - Alamofire (~> 5.4.1)
   - AlamofireImage (~> 4.1.0)
   - CommonsService (from `https://github.com/leticiassiqueira25/Commons.git`, branch `master`)
-  - DetalhesMoedas (from `https://github.com/letyciamarques/DetalhesMoeda.git`, branch `teste/leticia`)
+  - DetalhesMoedas (from `https://github.com/letyciamarques/DetalhesMoeda.git`, branch `feature/letycia`)
 
 SPEC REPOS:
   trunk:
@@ -23,7 +23,7 @@ EXTERNAL SOURCES:
     :branch: master
     :git: https://github.com/leticiassiqueira25/Commons.git
   DetalhesMoedas:
-    :branch: teste/leticia
+    :branch: feature/letycia
     :git: https://github.com/letyciamarques/DetalhesMoeda.git
 
 CHECKOUT OPTIONS:
@@ -31,7 +31,7 @@ CHECKOUT OPTIONS:
     :commit: 2f2a86287c2a321c19e54a722d9b58f793373775
     :git: https://github.com/leticiassiqueira25/Commons.git
   DetalhesMoedas:
-    :commit: 8be39d0d512c0da58a1f9860ba61c19fa96b757a
+    :commit: c3474b010cfe56adc57cff4d5f0406b0972fce9e
     :git: https://github.com/letyciamarques/DetalhesMoeda.git
 
 SPEC CHECKSUMS:
@@ -40,6 +40,6 @@ SPEC CHECKSUMS:
   CommonsService: f01c3e039222ea9665581397871c671294072135
   DetalhesMoedas: dd80b755136a83bff2d4abf2de7d45b433c2cce5
 
-PODFILE CHECKSUM: c5f6201d49b383dae54737740cdd71666403c963
+PODFILE CHECKSUM: 7ff2e61bd7790638e2cc3622d411b2ab596658f1
 
 COCOAPODS: 1.10.1

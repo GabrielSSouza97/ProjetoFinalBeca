@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritosViewController" customModule="DetalhesMoedas" customModuleProvider="target">
             <connections>
                 <outlet property="collectionViewFavoritos" destination="PCM-Vd-7rz" id="QRt-in-MyH"/>
+                <outlet property="labelData" destination="60g-kB-Dug" id="Nzq-8h-I4c"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
