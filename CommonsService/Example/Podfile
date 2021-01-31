@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'CommonsService_Example' do
+  pod 'CommonsService', :path => '../'
+
+  target 'CommonsService_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
