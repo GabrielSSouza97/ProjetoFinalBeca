@@ -31,7 +31,7 @@ CHECKOUT OPTIONS:
     :commit: 2f2a86287c2a321c19e54a722d9b58f793373775
     :git: https://github.com/leticiassiqueira25/Commons.git
   DetalhesMoedas:
-    :commit: 539977582f90d9844981bdf96b8cfa7770e75910
+    :commit: 9ade456063be2b19ac97645230639704a82626e2
     :git: https://github.com/letyciamarques/DetalhesMoeda.git
 
 SPEC CHECKSUMS:

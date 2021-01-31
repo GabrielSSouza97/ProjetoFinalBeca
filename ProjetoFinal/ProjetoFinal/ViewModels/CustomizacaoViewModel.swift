@@ -33,23 +33,14 @@ class CustomizacaoViewModel {
         MoedaDAO.shared.getMoedas { (success, moeda) in
             self.hideLoading?()
             if success {
+                //verificar com o self. => porque da erro com o self
                 self.createCell(moedas: moeda)
                 self.reloadTableView?()
             } else {
                 self.showError?()
             }
         }
-//        moedaService.getDataFromServer { (success, moeda) in
-//            self.hideLoading?()
-//            if success {
-//                self.createCell(moedas: moeda!)
-//                self.reloadTableView?()
-//            } else {
-//                self.showError?()
-//            }
-//        }
-    }
-    
+
     var numberOfCells: Int {
         return cellViewModels.count
     }
@@ -74,5 +65,6 @@ struct DataListCellViewModel {
     let siglaText: String
     let cotacaoText: Double
     let imagemURL: String
-}
+ }
 
+}

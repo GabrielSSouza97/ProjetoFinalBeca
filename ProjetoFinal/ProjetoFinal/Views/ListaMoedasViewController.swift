@@ -21,13 +21,13 @@ class ListaMoedasViewController: UIViewController {
     // MARK: Attributes
     
     var customViewModel: CustomizacaoViewModel
+    var moedas : Array<Moeda> = []
     let formataNumero: FormataNumero
-    
-    var moedas: Array<Moeda> = []
-
     
     init(customViewModel: CustomizacaoViewModel = CustomizacaoViewModel(), formataNumero: FormataNumero = FormataNumero()) {
         self.customViewModel = customViewModel
+        //self.customViewModel.getData()
+        self.moedas = customViewModel.moedas
         self.formataNumero = formataNumero
         super.init(nibName: "ListaMoedasViewController", bundle: nil)
     }
@@ -35,30 +35,40 @@ class ListaMoedasViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //View wiilappear - qnd entrar na detalhes seta como false
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-
         tableView.dataSource = self
         tableView.delegate = self
-        
         dataLabel.text = Date().dateString()
-        
-//        let tabBar = UITabBarController()
-//        tabBar.
-        
         initViewModel()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        atualizaFavorito()
     }
+    
+    func atualizaFavorito() {
+            let defaults = UserDefaults.standard
+            //lista de favoritos
+            let listaFavoritos = defaults.object(forKey:"ListaFavoritos") as? [String] ?? [String]()
+            
+            if(listaFavoritos.count > 0) {
+                for var item in moedas {
+                    for itemFavorito in listaFavoritos {
+                        if(item.siglaMoeda == itemFavorito) {
+                            item.isFavorite = true
+                        } else {
+                            item.isFavorite = false
+                        }
+                    }
+                }
+            }
+        }
 
 // MARK: - Methods
     
@@ -101,6 +111,8 @@ extension ListaMoedasViewController: UITableViewDataSource {
         cell.siglaLabel.text = cellVM.siglaText
         cell.nomeLabel.text = cellVM.nomeText
         cell.cotacaoLabel.text = formataNumero.formatarCotacao(cotacao: cellVM.cotacaoText)
+        // colocar uma condicional isFavorite para aparecer apenas nas moedas favoritas
+        cell.imagemFavorito.image = UIImage(named: "favoritos.png")
         
         let url = cellVM.imagemURL
         let newUrl = url.replacingOccurrences(of: "-", with: "")

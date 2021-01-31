@@ -74,19 +74,29 @@ public class DetalhesViewController: UIViewController {
     // MARK : @IBAction
     
     @IBAction func removeAdiciona(_ sender: UIButton) {
-        if moedaDetalhe.isFavorite == false {
-                  guard moedaDetalhe.siglaMoeda != nil else { return }
-                  let sigla = moedaDetalhe.siglaMoeda
-                  
-                  //Chama UserDefaults
-                  let defaults = UserDefaults.standard
-                  //Recupera Array
-                  var fav = defaults.array(forKey: "ArrayFavoritos")
-                  //Salva nova sigla no UserDefaults Array
-                  fav?.append(sigla)
-                  defaults.set(fav, forKey: "ArrayFavoritos")
-              } else {
-        }
+        guard moedaDetalhe.siglaMoeda != nil else { return }
+                    //Chama UserDefaults
+                    let defaults = UserDefaults.standard
+                    //tenta recuperar a lista, se não existir item, monta um array vazio
+                    var listaFavoritos = defaults.object(forKey:"ListaFavoritos") as? [String] ?? [String]()
+                    //só guardei a sigla da moeda aqui
+                    let moeda = moedaDetalhe.siglaMoeda
+                    //tem a sigla na lista? se sim, remove da lista
+                    if(listaFavoritos.contains(moeda)) {
+                        guard let indiceDaMoeda = listaFavoritos.firstIndex(of: moeda) else { return }
+                        listaFavoritos.remove(at: indiceDaMoeda)
+                    } else {
+                        //se não, adiciona na lista
+                        listaFavoritos.append(moeda)
+                    }
+                    
+                    //Recupera Array
+                    //var fav = defaults.array(forKey: "ListaFavoritos")
+                    //Salva nova sigla no UserDefaults Array
+                    
+                    defaults.set(listaFavoritos, forKey: "ListaFavoritos")
+                    //fav?.append(sigla)
+                    self.navigationController?.popViewController(animated: true)
     }
     
     public init(moedaDetalhe: Moeda, formataNumero: FormataNumero = FormataNumero()) {
@@ -104,7 +114,6 @@ public class DetalhesViewController: UIViewController {
             configuraValores()
             self.navigationController?.setNavigationBarHidden(false, animated: false)
             setupAccessibility()
-        
     }
     
     public func configuraValores() {
