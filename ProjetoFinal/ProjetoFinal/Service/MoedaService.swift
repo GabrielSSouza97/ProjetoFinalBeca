@@ -63,7 +63,7 @@ extension MoedaService {
             
             
             let tentarNovamente = UIAlertAction(title: "Tente novamente", style: .default, handler: { action in
-                //ListaMoedasViewController().initViewModel()
+                CustomizacaoViewModel().getData()
             })
             alerta.addAction(tentarNovamente)
 

@@ -21,10 +21,8 @@ class ListaMoedasViewController: UIViewController {
     // MARK: Attributes
     
     var customViewModel: CustomizacaoViewModel
-    let formataNumero: FormataNumero
-    
     var moedas: Array<Moeda> = []
-
+    let formataNumero: FormataNumero
     
     init(customViewModel: CustomizacaoViewModel = CustomizacaoViewModel(), formataNumero: FormataNumero = FormataNumero()) {
         self.customViewModel = customViewModel
@@ -36,23 +34,14 @@ class ListaMoedasViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //View wiilappear - qnd entrar na detalhes seta como false
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-
         tableView.dataSource = self
         tableView.delegate = self
-        
         dataLabel.text = Date().dateString()
         
-//        let tabBar = UITabBarController()
-//        tabBar.
-        
         initViewModel()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,9 +54,6 @@ class ListaMoedasViewController: UIViewController {
     func initViewModel(){
         customViewModel.reloadTableView = {
             DispatchQueue.main.async { self.tableView.reloadData() }
-        }
-        customViewModel.showError = {
-            DispatchQueue.main.async { self.showAlert("Algo deu errado!") }
         }
         customViewModel.showLoading = {
             DispatchQueue.main.async { self.activityIndicator.startAnimating() }
@@ -106,7 +92,7 @@ extension ListaMoedasViewController: UITableViewDataSource {
         let newUrl = url.replacingOccurrences(of: "-", with: "")
         guard let imageUrl = URL(string: "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/\(newUrl).png") else { return UITableViewCell()}
         cell.imagemMoeda.af_setImage(withURL: imageUrl)
-        
+
         return cell
     
     }
