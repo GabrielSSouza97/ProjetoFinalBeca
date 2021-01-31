@@ -109,11 +109,19 @@ public class DetalhesViewController: UIViewController {
             imagemMoeda.af_setImage(withURL: imageUrl)
             
         if moedaDetalhe.isFavorite == false {
+
                         labelBotao.text = "ADICIONAR"
-                    } else {
+
+                        imagemFavorito.image = UIImage(named: "")
+
+         } else {
+
                         labelBotao.text = "REMOVER"
-                    }
-           }
+
+                        imagemFavorito.image = UIImage(named: "icon_favorite.png")
+
+         }
     }
+}
 
 
