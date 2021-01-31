@@ -11,7 +11,8 @@ import DetalhesMoedas
 import CommonsService
 
 class DashboardTabBarController: UITabBarController, UITabBarControllerDelegate {
-
+    
+    // MARK: - Attributes
     var moedasFavoritos: Array<Moeda> = []
     var firstViewController: ListaMoedasViewController
     var secondViewController: FavoritosViewController
@@ -29,6 +30,8 @@ class DashboardTabBarController: UITabBarController, UITabBarControllerDelegate 
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
@@ -45,6 +48,8 @@ class DashboardTabBarController: UITabBarController, UITabBarControllerDelegate 
             self.viewControllers = tabBarList
         
     }
+    
+    // MARK: - Methods
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         if(item.title == "Favoritos") {
